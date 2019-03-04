@@ -49,6 +49,13 @@ assert_equal( @books[-1][:title], mylibrarybook[:title])
 assert_equal( @books[-1][:title], "The Gruffalo Cookbook")
 end
 
+def test_add_new_book_2
+#  mylibrarybook={title: "Gone Girl", rental_details: {student_name: "", date: ""}}
+  mylibrary=Library.new(@books)
+  mylibrary.add_new_book_2("Gone Girl",nil,nil)
+# assert_equal( @books[-1][:title], mylibrarybook[:title])
+assert_equal( @books[-1][:title], "Gone Girl")
+end
 
 def test_update_rental_details
     mylibrary=Library.new(@books)

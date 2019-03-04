@@ -40,6 +40,18 @@ class Library
   #     p "New Library:  #{@library_books}"
   # end
 
+  def add_new_book_2(title,name,date)
+  #    p "New book: #{new_book}"
+  # new_book=Hash.new()
+  # new_book[:title]=title
+  # new_rental_details=Hash.new()
+  # new_rental_details[:student_name]=name
+  # new_rental_details[:date]=date
+  # new_book[:rental_details]=new_rental_details
+  new_book={title: title, rental_details: {student_name: name, date: date}}
+    @library_books << new_book if (new_book != nil)
+  #   p "New Library:  #{@library_books}"
+  end
 
 
   def update_details(title,name,date)
